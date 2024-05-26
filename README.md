@@ -50,5 +50,5 @@ This project aims to develop and demonstrate skills in web programming, specific
 **Kleart Adri** |
 **Arbri Gaba**  |
 **Trifon Suku**  
-# Thank you for visiting the Domenico Restaurant website project!😊
+# Thank you for visiting the Domenico Restaurant website project!
 
