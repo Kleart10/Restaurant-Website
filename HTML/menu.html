@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="icon" type="image/png" href="imazhe/Restaurant Cafe Logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700|Satisfy|Comic+Neue:300,400,700"
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+
+
+
+#logos {
+  width: 7%; 
+  height: auto; 
+  border-radius: 50%;
+  position: absolute; 
+  left:8%; 
+  top: 95%; 
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+}
+
+
+
+.navbar {
+  background-color: #cba366;;
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links li {
+  margin: 0;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #ff9b08;
+  color: #000;
+  border-radius: 5px;
+}
+
+
+header {
+  background-color: black;
+  color: #ff9b08;
+  padding: 30px; 
+  height: 120px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  position: relative; 
+}
+#activemenu{
+    background-color: #ff9b08;
+}
+    #menu1{
+      background-color: #ff9b08;
+    }
+
+
+
+        body {
+            background-color: #e4be84;
+        }
+
+        h2{
+
+      text-align: center;
+      font-family: 'Sofia', sans-serif;
+      font-size: 45px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: white;
+
+        }
+
+
+
+        .menu #menu-flters {
+            padding: 0;
+            margin: 0 auto 0 auto;
+            list-style: none;
+            text-align: center;
+            border-radius: 50px;
+        }
+
+        .menu #menu-flters li {
+            cursor: pointer;
+            display: inline-block;
+            padding: 8px 12px 10px 12px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+            color: #948c81;
+            margin-bottom: 10px;
+            transition: all ease-in-out 0.3s;
+            border-radius: 50px;
+            font-family: "Poppins", serif;
+        }
+
+        .menu #menu-flters li:hover,
+        .menu #menu-flters li.filter-active {
+            color: #fff;
+            background: #ffb03b;
+        }
+
+        .menu #menu-flters li:last-child {
+            margin-right: 0;
+        }
+
+        .menu .menu-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            float: left;
+            border: 5px solid rgba(196, 35, 35, 0.1);
+        }
+
+        .menu .menu-content {
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+        }
+
+        .menu .menu-content::after {
+            content: "......................................................................" "...................................................................." "....................................................................";
+            position: absolute;
+            left: 20px;
+            right: 0;
+            top: -4px;
+            z-index: 1;
+            color: #dad8d4;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        .menu .menu-content p {
+            padding-right: 10px;
+            background: #e4be84;
+            position: relative;
+            z-index: 3;
+            font-weight: 700;
+            color: white;
+        }
+
+        .menu .menu-content span {
+            background: #e4be84;
+            position: relative;
+            z-index: 3;
+            padding: 0 10px;
+            font-weight: 60;
+            color: black;
+        }
+
+        .menu .menu-ingredients {
+            font-style: italic;
+            font-size: 14px;
+            font-family: "Comic Neue", sans-serif;
+            color: #948c81;
+        }
+
+        .menu .menu-item-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .menu .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 16px 0;
+        }
+        /*pjesa e css te footer*/
+  #footer {
+      background-color: #cba366;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+  }
+
+  .contact {
+      flex: 1;
+      margin-right: 20px;
+      order: -1;
+  }
+
+  .social-icons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+  }
+
+  .social-icon {
+      margin-top: 10px;
+      margin-bottom: 5px;
+  }
+
+  .social-icon img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+  }
+
+  .contact h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      margin-top: 0;
+  }
+
+  .contact p {
+      margin: 5px 0;
+      font-size: 1em;
+  }
+
+  /*PJESA CSS E FOOTER*/
+  footer {
+      background-color: black;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+  }
+
+  .contact {
+      flex: 1;
+  }
+
+  .social-icons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+  }
+
+  .social-icon {
+      margin-top: 10px;
+      margin-bottom: 5px;
+  }
+
+  .social-icon img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+  }
+
+  .contact h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      margin-top: 10px;
+  }
+
+  .contact p {
+      margin: 15px 0;
+      font-size: 1.1em;
+  }
+
+  .social-icon:hover img {
+      transform: scaleX(-1);
+  }
+  #activemenu{
+    background-color: #ff9b08;
+  }
+
+    </style>
+
+    <script>
+        (() => {
+            const select = (el, all = false) => {
+                el = el.trim();
+                return all ? [...document.querySelectorAll(el)] : document.querySelector(el);
+            }
+
+            const on = (type, el, listener, all = false) => {
+                let selectEl = select(el, all);
+                if (selectEl) {
+                    if (all) selectEl.forEach(e => e.addEventListener(type, listener));
+                    else selectEl.addEventListener(type, listener);
+                }
+            }
+
+            window.addEventListener('load', () => {
+                let menuContainer = select('.menu-container');
+                if (menuContainer) {
+                    let menuIsotope = new Isotope(menuContainer, {
+                        itemSelector: '.menu-item',
+                        layoutMode: 'fitRows'
+                    });
+
+                    on('mousedown', '#menu-flters li', function (e) {
+                        e.preventDefault();
+                        let menuFilters = select('#menu-flters li', true);
+                        menuFilters.forEach(el => el.classList.remove('filter-active'));
+                        this.classList.add('filter-active');
+                        menuIsotope.arrange({ filter: this.getAttribute('data-filter') });
+                    }, true);
+                }
+            });
+
+        })();
+        document.addEventListener('DOMContentLoaded', function() {
+    var scrollToContactsLinks = document.querySelectorAll('a[href="#contacts"]');
+
+    scrollToContactsLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            var footer = document.getElementById('footer');
+            footer.scrollIntoView({ behavior: 'smooth' }); // Scroll to the footer smoothly
+        });
+    });
+});
+
+
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="container1">
+
+            <a href="index.html" class="logo"><img id="logos" src="imazhe/Restaurant Cafe Logo.png" alt=""></a>
+            <ul class="nav-links">
+                <li><a  href="index.html">Home</a></li>
+                <li><a id="activemenu" href="menu.html">Menu</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a  href="reservation.html">Reservation</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="menu" class="menu section-bg">
+      <div class="container max-width-container" data-aos="fade-up">
+         <div class="section-title">
+             <h2>Menu</h2>
+
+         </div>
+         <div class="row" data-aos="fade-up" data-aos-delay="100">
+             <div class="col-lg-12 d-flex justify-content-center">
+                 <ul id="menu-flters">
+                     <li data-filter="*" class="filter-active">All</li>
+                     <li data-filter=".filter-homemade">HOMEMADE</li>
+                     <li data-filter=".filter-salads">Salads</li>
+
+                     <li data-filter=".filter-soup">SOUP</li>
+                     <li data-filter=".filter-pasta">PASTA</li>
+                     <li data-filter=".filter-risottos">RISOTTOS</li>
+                     <li data-filter=".filter-first-dishes">FIRST DISHES</li>
+                     <li data-filter=".filter-premium-meat">PREMIUM MEAT/DRY AGED MEAT</li>
+                     <li data-filter=".filter-desserts">DESSERTS</li>
+
+                 </ul>
+             </div>
+         </div>
+
+         <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+           <div class="col-lg-6 menu-item filter-salads">
+    <img src="menu/caesar.jpg" class="menu-img" alt="">
+    <div class="menu-item-details">
+        <div class="menu-content">
+            <p>CAESAR SALAD</p><span>1000 L</span>
+        </div>
+        <div class="menu-ingredients">
+            iceberg, chicken fillet, diced toast, parmesan, corn and Caesar sauce
+        </div>
+    </div>
+</div>
+<div class="col-lg-6 menu-item filter-salads">
+    <img src="menu/deliziosa.jpg" class="menu-img" alt="">
+    <div class="menu-item-details">
+        <div class="menu-content">
+            <p>DELIZIOSA SALAD</p><span>850 L</span>
+        </div>
+        <div class="menu-ingredients">
+            arugula, radicchio, escarole, curly lettuce, toasted hazelnuts, smoked scamorza and sweet sauce
+        </div>
+    </div>
+</div>
+<div class="col-lg-6 menu-item filter-salads">
+    <img src="menu/quinoa.jpg" class="menu-img" alt="">
+    <div class="menu-item-details">
+        <div class="menu-content">
+            <p>QUINOA SALAD</p><span>700 L</span>
+        </div>
+        <div class="menu-ingredients">
+            quinoa, chili pepper, carrot, cucumber and avocado
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-6 menu-item filter-salads">
+    <img src="menu/spinach.jpg" class="menu-img" alt="">
+    <div class="menu-item-details">
+        <div class="menu-content">
+            <p>SPINACH SALAD</p><span>850 L</span>
+        </div>
+        <div class="menu-ingredients">
+            spinach, dried tomato, gorgonzola, nuts and fruit
+        </div>
+    </div>
+</div>
+
+
+             <div class="col-lg-6 menu-item filter-homemade">
+                 <img src="menu/stuffed.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>STUFFED PEPPERS WITH CHEESE</p><span>500 L</span>
+                     </div>
+                 </div>
+             </div>
+
+
+             <div class="col-lg-6 menu-item filter-homemade">
+                 <img src="menu/roasted.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>ROASTED VEGETABLES</p><span>600 L</span>
+                     </div>
+                 </div>
+             </div>
+
+             <!-- SOUP -->
+             <div class="col-lg-6 menu-item filter-soup">
+                 <img src="menu/soup.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>SOUP OF THE DAY</p><span>500 L</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-soup">
+                 <img src="menu/homemade.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>HOMEMADE SOUP</p><span>600 L</span>
+                     </div>
+                     <div class="menu-ingredients">
+                         Soup with beef meatballs
+                     </div>
+                 </div>
+
+             </div>
+
+             <!-- PASTA -->
+             <div class="col-lg-6 menu-item filter-pasta">
+                 <img src="menu/tagliatelle.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>TAGLIATELLE WITH TRUFFLE</p><span>1100 L</span>
+                     </div>
+                     <div class="menu-ingredients">
+                         (With fresh truffle and parmesan cheese)
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-pasta">
+                 <img src="menu/spaghetti.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>SPAGHETTI BOLOGNESE</p><span>900 L</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-pasta">
+                 <img src="menu/ravioli.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>RAVIOLI</p><span>1200 L</span>
+                     </div>
+                     <div class="menu-ingredients">
+                         (With spinach and ricotta)
+                     </div>
+                 </div>
+             </div>
+
+             <!-- RISOTTOS -->
+
+             <div class="col-lg-6 menu-item filter-risottos">
+                 <img src="menu/sausage.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>SAUSAGE AND CHICORY RISOTTO</p><span>1000 L</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-risottos">
+                 <img src="menu/risotto.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>RISOTTO ON PARMESAN WHEEL</p><span>1700 L</span>
+                     </div>
+                     <div class="menu-ingredients">
+                         (With fresh truffle and porcini)
+                     </div>
+                 </div>
+             </div>
+
+
+             <div class="col-lg-6 menu-item filter-first-dishes">
+                 <img src="menu/lamb.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>LAMB CHOP</p><span>1600 L</span>
+                     </div>
+                     <div class="menu-ingredients">
+                         (With saffron cream and cherry tomatoes)
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-first-dishes">
+                 <img src="menu/fillet.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>FILLET MIGNON</p><span>3300 L</span>
+                     </div>
+                     <div class="menu-ingredients">
+                         (With foie gras and truffle)
+                     </div>
+                 </div>
+             </div>
+
+             <!-- PREMIUM MEAT/DRY AGED MEAT -->
+             <div class="col-lg-6 menu-item filter-premium-meat">
+                 <img src="menu/tomahawk.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>TOMAHAWK</p><span>12000 L/KG</span>
+                     </div>
+                 </div>
+             </div>
+
+
+             <!-- DESSERTS -->
+             <div class="col-lg-6 menu-item filter-desserts">
+                 <img src="menu/baklava.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>BAKLAVA WITH ICE CREAM</p><span>550 L</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-desserts">
+                 <img src="menu/cream.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>CREME BRULEE</p><span>450 L</span>
+                     </div>
+                 </div>
+             </div>
+
+
+             <div class="col-lg-6 menu-item filter-homemade">
+                 <img src="menu/patato.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>POTATO SALAD</p><span>500 L</span>
+                     </div>
+                 </div>
+             </div>
+
+
+
+             <div class="col-lg-6 menu-item filter-homemade">
+                 <img src="menu/pickled.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>PICKLED MUSHROOMS</p><span>600 L</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-soup">
+                 <img src="menu/bruschetta.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>BRUSCHETTA</p><span>400 L</span>
+                     </div>
+                     <div class="menu-ingredients">
+                        Tomato, olive oil and basil
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-soup">
+                 <img src="menu/chicken.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>CHICKEN SOUP</p><span>700 L</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-pasta">
+                 <img src="menu/pasta.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>PASTA WITH SEAFOOD</p><span>1400 L</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-pasta">
+                 <img src="menu/penne.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>PENNE ARRABIATA</p><span>900 L</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-risottos">
+                 <img src="menu/seafood.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>SEAFOOD RISOTTO</p><span>1400 L</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-risottos">
+                 <img src="menu/vegetable.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>VEGETABLE RISOTTO</p><span>800 L</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-first-dishes">
+                 <img src="menu/grilled.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>GRILLED CHICKEN BREAST</p><span>1200 L</span>
+                     </div>
+                     <div class="menu-ingredients">
+                         (With lemon and herbs)
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-first-dishes">
+                 <img src="menu/salmon.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>GRILLED SALMON</p><span>1800 L</span>
+                     </div>
+                     <div class="menu-ingredients">
+                         (With dill sauce)
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-premium-meat">
+                 <img src="menu/ribeye.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>RIBEYE STEAK</p><span>9500 L/KG</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-premium-meat">
+                 <img src="menu/dry.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>DRY AGED T-BONE STEAK</p><span>11000 L/KG</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-desserts">
+                 <img src="menu/chocolate.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>CHOCOLATE MOUSSE</p><span>500 L</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6 menu-item filter-desserts">
+                 <img src="menu/tiramisu.jpg" class="menu-img" alt="">
+                 <div class="menu-item-details">
+                     <div class="menu-content">
+                         <p>TIRAMISU</p><span>600 L</span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+</body>
+<footer id="footer">
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>Tirane,Albania,1001</p>
+            <p>Phone: +355 12 34 567</p>
+            <p>Email: info@edomenico.com</p>
+            <p>Open Hours: Monday to Friday, 9am - 5pm</p>
+            <p>© Copyright 2024. Design by Arbri Gaba</p>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><img src="imazhe/instag.png" alt="Instagram"></a>
+            <a href="#" class="social-icon"><img src="imazhe/vecteezy_whatsapp-logo-png-whatsapp-icon-png-whatsapp-transparent_18930464.png" alt="WhatsApp"></a>
+            <a href="#" class="social-icon"><img src="imazhe/ex.png" alt="Twitter"></a>
+            <a href="#" class="social-icon"><img src="imazhe/facebook.png" alt="Facebook"></a>
+        </div>
+</html>

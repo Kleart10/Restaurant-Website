@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+        #hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("imazhe/domenico2.png") top center;
+  background-size: cover;
+  z-index: 0; /* Ensure the background image is behind everything */
+  /*filter: brightness(80%); /* Darken the background image */
+  mix-blend-mode: multiply; /* Apply the darken effect */
+}
+#demos {
+  color: #eee;
+  margin-bottom: 10px 0 0 0;
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+}
+
+    </style>
+    <link rel="icon" type="image/png" href="imazhe/Restaurant Cafe Logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script>
+          
+        (() => {
+            const select = (el, all = false) => {
+                el = el.trim();
+                return all ? [...document.querySelectorAll(el)] : document.querySelector(el);
+            }
+
+            const on = (type, el, listener, all = false) => {
+                let selectEl = select(el, all);
+                if (selectEl) {
+                    if (all) selectEl.forEach(e => e.addEventListener(type, listener));
+                    else selectEl.addEventListener(type, listener);
+                }
+            }
+
+
+        })();
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll('.about-us .image img');
+            const textParagraphs = document.querySelectorAll('.about-us .text p');
+
+            images.forEach(image => {
+                image.addEventListener('mouseover', function() {
+                    image.style.transform = 'scale(1.05)';
+                });
+
+                image.addEventListener('mouseout', function() {
+                    image.style.transform = 'scale(1)';
+                });
+            });
+
+            textParagraphs.forEach(paragraph => {
+                paragraph.addEventListener('mouseover', function() {
+                    paragraph.style.color = '#000';
+                });
+                paragraph.addEventListener('mouseout', function() {
+                    paragraph.style.color = '#fff';
+                });
+            });
+        });
+        // scripts.js
+        document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        if (index >= slides.length) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = slides.length - 1;
+        } else {
+            currentIndex = index;
+        }
+        const offset = -currentIndex * 100;
+        document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+    }
+
+    prevButton.addEventListener('click', function() {
+        showSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener('click', function() {
+        showSlide(currentIndex + 1);
+    });
+
+    setInterval(function() {
+        showSlide(currentIndex + 1);
+    }, 3000); // Change image every 3 seconds
+
+    showSlide(currentIndex);
+});
+
+
+    
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles_home.css"> <!-- Link to your CSS file -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar">
+       
+        <div class="container1">
+            
+            <a href="index.html" class="logo"><img id="logos" src="imazhe/Restaurant Cafe Logo.png" alt=""></a>
+            <ul class="nav-links">
+                <li><a id="activehome" href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a  href="reservation.html">Reservation</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+          <div class="row">
+            <div class="col-lg-8">
+              <br><br><br><br><br><br><br><br><br>
+              <h1>Welcome to <span>Domenico Restaurant </a></span></h1>
+              <h2 id="demos">Restaurant Domenico is the perfect place for all taste lovers.</h2>
+    
+              <div class="btns">
+                <a href="menu.html" style="text-decoration: none;" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
+                <a href="reservation.html" style="text-decoration: none;" class="btn-book animated fadeInUp scrollto">Book a Table</a>
+              </div>
+            </div>
+           
+            </div>
+    
+          </div>
+        </div>
+      </section><!-- End Hero -->
+      <section class="about-us" id="about">
+        <div class="container">
+            <h1>About Us</h1>
+            <div class="content">
+                <div class="image">
+                    <img src="imazhe/restaurant-photo.jpg" alt="Restaurant Photo">
+                </div>
+                <div class="text">
+                    <p>Established a decade ago, we've been crafting culinary experiences that tantalize taste buds and create lasting memories. At Domenico, our journey began with a passion for flavor and a commitment to excellence.</p>
+                    <p>Our team of talented chefs is passionate about creating innovative dishes that combine classic flavors with a modern twist. Whether you're joining us for a special occasion or just a casual meal, we strive to make every visit memorable.</p>
+                    <p>A decade of culinary mastery defines us at Domenico. From our humble beginnings to becoming a beloved fixture in the community, we've consistently delivered exceptional dining experiences, earning trust one plate at a time.</p>
+                </div>
+            </div>
+ 
+            <div class="content reverse">
+                <div class="image">
+                    <img src="imazhe/food.jpg" alt="Delicious Food">
+                </div>
+                <div class="text">
+                    <p>Our food is a celebration of traditional flavors and culinary artistry. Every dish is meticulously crafted to honor the rich heritage of our cuisine, bringing you a taste that is both authentic and unforgettable.</p>
+                    <p>We take pride in using time-honored recipes passed down through generations, ensuring that each bite is a nostalgic journey to the roots of our culture. Our chefs skillfully blend these traditions with modern techniques to create a dining experience that is both familiar and new.</p>
+                    <p>From hearty, savory meals to delicate, sweet treats, our menu is designed to satisfy every palate. We invite you to indulge in the delicious, traditional flavors that make our food truly special, and to create your own memorable moments with us.</p>
+                </div>
+            </div>
+        </div>
+         <h1>Gallery</h1>
+         <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="imazhe/image1.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="imazhe/image2.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="imazhe/image3.jpg" alt="Image 3"></div>
+                <div class="slide"><img src="imazhe/image4.jpg" alt="Image 4"></div>
+            </div>
+            <div class="navigation">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        </div>
+        
+    </section>
+    <section class="teamchefs">
+    <div class="teamtitle">
+    <h2 id="ourteam">Our Chefs</h2>
+    <section class="chefs">
+           <div class="boxchefs">
+          <div class="card">
+           
+              <div class="face face1">
+                  <div class="content">
+                      <div class="icon">
+                          <img src="imazhe/chefn8.png" alt="Chef Image">
+                      </div>
+                  </div>
+              </div>
+              <div class="face face2">
+                  <div class="content">
+                      <p>Gordon Ramsay</p>
+                      <p>Executive Chef</p>
+                  </div>
+              </div>
+          </div>
+          <div class="card">
+              <div class="face face1">
+                  <div class="content">
+                      <div class="icon">
+                          <img src="imazhe/chefn6.png" alt="Chef Image">
+                      </div>
+                  </div>
+              </div>
+              <div class="face face2">
+                  <div class="content">
+                      <p>Jamie Oliver</p>
+                      <p>Pasta Chef</p>
+                  </div>
+              </div>
+          </div>
+          <div class="card">
+              <div class="face face1">
+                  <div class="content">
+                      <div class="icon">
+                          <img src="imazhe/chef7.png" alt="Chef Image">
+                      </div>
+                  </div>
+              </div>
+              <div class="face face2">
+                  <div class="content">
+                      <p>Rachael Ray</p>
+                      <p>Desserts Chef</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</div>
+</section>
+
+
+    <footer id="footer">
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>123 Main Street, Cityville, State, ZIP</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@domenico.com</p>
+        <p>Open Hours: Monday to Friday, 9am - 5pm</p>
+        <p>© Copyright 2024. Design by Trifon Suku,Arbri Gaba</p>
+    </div>
+    <div class="social-icons">
+        <a href="#" class="social-icon"><img src="imazhe/instag.png" alt="Instagram"></a>
+        <a href="#" class="social-icon"><img src="imazhe/vecteezy_whatsapp-logo-png-whatsapp-icon-png-whatsapp-transparent_18930464.png" alt="WhatsApp"></a>
+        <a href="#" class="social-icon"><img src="imazhe/Twitter.png" alt="Twitter"></a>
+        <a href="#" class="social-icon"><img src="imazhe/facebook.png" alt="Facebook"></a>
+    </div>
+</footer>
+<script>
+   
+   document.addEventListener('DOMContentLoaded', function() {
+    var scrollToContactsLinks = document.querySelectorAll('a[href="#contacts"]');
+
+    scrollToContactsLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            var footer = document.getElementById('footer');
+            footer.scrollIntoView({ behavior: 'smooth' }); // Scroll to the footer smoothly
+        });
+    });
+});
+</script>
+
+
+</body>
+</html>

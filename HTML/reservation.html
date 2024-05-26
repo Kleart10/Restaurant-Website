@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="icon" type="image/png" href="imazhe/Restaurant Cafe Logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+<body>
+    
+    <!--Pjesa e Header dhe e NAV BAR-->
+    <nav class="navbar">
+       
+        <div class="container1">
+            
+            <a href="index.html" class="logo"><img id="logos" src="imazhe/Restaurant Cafe Logo.png" alt=""></a>
+            <ul class="nav-links">
+                <li><a  href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a id="activebook" href="reservation.html">Reservation</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!--PJESA E TITULLIT DHE PERSHKRIMIT-->
+    
+    <h2 id="titullibooking">Book a Table</h2>
+    <p id="pershkrim">With a beautiful atmosphere and a rich menu with great flavors, we offer you the opportunity to experience a great dinner or lunch with friends and family. Reserve your table now!</p>
+
+    <div class="container">
+        <div class="reservation-video">
+           
+            <video id="videopromo" controls autoplay width="320" height="240">
+                <source  src="videodomenico.mp4" type="video/mp4">
+               
+             
+              </video>
+        </div>
+        <div class="left-content">
+            <!-- Pjesa e videos gjate autoplay -->
+            
+        </div>
+        <div class="right-content">
+           
+           
+           
+           
+            <!-- PJESA E INPUTEVE PER FORMS -->
+            
+            <form id="reservationForm">
+                <div class="input-container">
+                    <input type="text" id="emri" name="emri" placeholder="Name" required>
+                    <img src="imazhe/personlogo.png" alt="Person Icon">
+                </div>
+
+                <div class="input-container">
+                    <input type="text" id="mbiemri" name="mbiemri" placeholder="Surname" required>
+                    <img src="imazhe/mbiemrilogo.png" alt="Logo">
+                </div>
+
+                <div class="input-container">
+                    <input type="text" id="phone" name="phone" placeholder="+355 12 34 567" required>
+                    <img src="imazhe/phonelogo.png" alt="Phone Icon">
+                </div>
+
+                <div class="input-container">
+                    <input type="number" id="persona" name="persona" min="1" max="30" placeholder="Nr.of Guests" required>
+                    <img src="imazhe/nr_of_guests.png" alt="nr_of_guests">
+                </div>
+
+                <div class="input-container">
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                    <img src="imazhe/maillogo.png" alt="maillogo">
+                </div>
+
+                <div class="input-container">
+                    <input type="date" id="date" name="date" placeholder="01/01/2024" required>
+                    <img src="imazhe/datalogo.png" alt="datalogo">
+                </div>
+
+                <div class="input-container">
+                    <input type="time" id="time" name="time" placeholder="12:00" required>
+                    <img src="imazhe/timelogo.png" alt="timelogo">
+                </div>
+                <div id="reservationMessage"></div>
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary btn-ghost">BOOK TABLE</button>
+                    <button type="button" class="btn btn-primary btn-ghost" onclick="window.location.href='https://web.whatsapp.com/'">BOOK IN <br><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                      </svg> <img src="" alt=""></button>
+                </div>
+                
+            </form>
+            
+            
+          
+        </div>
+    </div>
+    <h3 class="text-center"><br><br>Find us!</h3><br>
+   
+   
+   
+   
+   
+   
+   
+   
+    <!--PJESA E HARTES-->
+    <section class="map" id="footer">
+        <div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.076922933891!2d19.819496315700214!3d41.32767404050108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1351261d8e1b1191%3A0x66760a76880788df!2sTirana%2C%20Albania!5e0!3m2!1sen!2s!4v1621221844570!5m2!1sen!2s" style="width:100%; height:250px; border:0;" allowfullscreen></iframe>
+
+        </div>
+    </section>
+    <br>
+    <br>
+    <br><br><br>
+    
+        
+            
+                        
+
+
+
+
+
+
+    <!--PJESA E FOOTER-->
+   
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
+<footer id="footer">
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>Tirane, Albania, 1001</p>
+        <p>Phone: +355 12 34 567</p>
+        <p>Email: info@domenico.com</p>
+        <p>Open Hours: Monday to Friday, 9am - 5pm</p>
+        <p>© Copyright 2024. Design by Kleart Adri</p>
+    </div>
+    <div class="social-icons">
+        <a href="#" class="social-icon"><img src="imazhe/instag.png" alt="Instagram"></a>
+        <a href="#" class="social-icon"><img src="imazhe/vecteezy_whatsapp-logo-png-whatsapp-icon-png-whatsapp-transparent_18930464.png" alt="WhatsApp"></a>
+        <a href="#" class="social-icon"><img src="imazhe/ex.png" alt="Twitter"></a>
+        <a href="#" class="social-icon"><img src="imazhe/facebook.png" alt="Facebook"></a>
+    </div>
+</footer>
