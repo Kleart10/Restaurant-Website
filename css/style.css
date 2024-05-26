@@ -1,0 +1,404 @@
+/*Kleart Adri*/
+/*Pjesa e CSS PER BODYN*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e4be84;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-x: hidden;
+    color: #fff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+/*Pjesa e css per header dhe nav bar*/
+/*Pjesa e logos te restorantit*/
+#logos {
+  width: 7%; 
+  height: auto; 
+  border-radius: 50%;
+  position: absolute; 
+  left:8%; 
+  top: 95%; 
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+}
+
+
+
+.navbar {
+  background-color: #cba366;;
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links li {
+  margin: 0;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #ff9b08;
+  color: #000;
+  border-radius: 5px;
+}
+
+
+header {
+  background-color: black;
+  color: #ff9b08;
+  padding: 30px; 
+  height: 120px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  position: relative; 
+}
+#activebook{
+    background-color: #ff9b08;
+}
+
+/*Pjesa e perfundimit te HEADER DHE NAV BAR*/
+/*PJESA E CSS PER TIULLIN E FAQES "BOOK A TABLE"*/
+#titullibooking{
+    text-align: center;
+font-family: 'Sofia', sans-serif;
+font-size: 45px;
+margin-top: 20px;
+margin-bottom: 20px;
+color: #fff;
+}
+/*Pjesa e pershkrimit posht titullit*/
+#pershkrim {
+    font-family: 'Poetsen One', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/*Pjesa e Section per vendosjen e videos dhe reservation form.*/
+
+.container {
+    position: relative; /*Video vendoset fullscreen ne background ne te gjithe section*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+/*pjesa ne te djathte e reservation form*/
+
+.right-content {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*BUTONAT PJESA E POZICIONIMT POSHT FORMS*/
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.form-buttons button {
+    width: 300%;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .left-content,
+    .right-content {
+        flex: 1;
+    }
+
+    .right-content {
+        max-width: none;
+        align-items: flex-start;
+    }
+    .form-buttons button {
+        width: 300px;
+    }
+}
+/*mbarimi i css per pozicionimin e butonave*/
+
+
+/*Pjesa e css per form rezervimi*/
+.reservation-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+#videopromo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Ben qe pjesa e form te jete cover pra inputet te jene cover mbi videon*/
+    z-index: -1; /* Ensure video is behind other content */
+}
+
+form {
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="email"],
+.input-container input[type="date"],
+.input-container input[type="time"],
+.input-container input[type="number"] {
+    width: 370px;
+    padding: 15px 15px 15px 50px;
+    margin-bottom: 15px;
+    background-color: black;
+    border: 1px solid #cba366;
+    border-radius: 5px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.input-container input::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #ff9b08;
+}
+/*pjesa e logove te vendosura brenda inputeve*/
+.input-container img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    width: 20px;
+    height: auto;
+}
+/*Pjesa e mbarimit te css per formen e rezervimit*/
+/*pjesa per animacionin e butonit marre ne internet
+linku=https://codepen.io/alphardex/pen/zYYZorR*/
+button,
+.btn {
+    padding: 10px;
+    width: 50%;
+    margin-bottom: 15px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    left: 135px;
+}
+
+button::before,
+.btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, var(--primary-color), transparent);
+    transform: translateX(-100%);
+    transition: 0.6s;
+}
+
+button:hover,
+.btn:hover {
+    background: transparent;
+    box-shadow: 0 0 20px 10px hsla(34, 100%, 53%, 0.5);
+}
+
+button:hover::before,
+.btn:hover::before {
+    transform: translateX(100%);
+}
+/*pjesa e printimit te mesazhit per rezervim te sukseshem*/
+#reservationMessage {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: right;
+    color: white;
+    margin-right: 5px;
+}
+/*PJESA E CSS TEK HARTA*/
+.text-center {
+    text-align: center;
+    font-family: 'Sofia', sans-serif;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+.map-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/*PJESA E FOOTER*/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .left-content,
+    .right-content {
+        flex: 1;
+    }
+
+    .right-content {
+        max-width: none;
+    }
+}
+
+:root {
+    --primary-color: #ff9b08;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #cba366;;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.contact {
+    flex: 1;
+    min-width: 250px; 
+    margin-bottom: 20px; 
+    text-align: left; 
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 150px; 
+    margin-left: auto; 
+}
+
+.social-icon {
+    margin: 10px 0; }
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin: 10px 0; 
+}
+
+.contact p {
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+.social-icon:hover img {
+    transform: scaleX(-1);
+}
+
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center; 
+    }
+
+    .social-icons {
+        align-items: center; 
+        margin-top: 20px; 
+        margin-left: 0; 
+    }
+
+    .contact, .social-icons {
+        width: 100%; 
+    }
+}

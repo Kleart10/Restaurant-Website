@@ -1,0 +1,647 @@
+/* styles.css */
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+/* Header styles */
+#logos {
+  width: 7%; /* Adjust the width to fit within the header and page */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%;
+  position: absolute; /* Position image absolutely */
+  left:8%; /* Adjust left position as per your design */
+  top: 95%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Center align horizontally */
+  z-index: 1; /* Ensure it's behind other content */
+}
+
+
+
+
+.navbar {
+  background-color: #cba366;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links li {
+  margin: 0;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #ff9b08;
+  color: #000;
+  border-radius: 5px;
+}
+
+#imazhirestoranti {
+  
+    width: 8%; /* Increase the width for better visibility */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    position: absolute; /* Position image absolutely */
+    left: 10%; /* Adjust left position as per your design */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%); /* Center align horizontally */
+  
+}
+header {
+  background-color: black;
+  color: #ff9b08;
+  padding: 30px; /* Increase padding for top and bottom */
+  height: 120px; /* Increase height */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Align items to the start and end of the header */
+  align-items: center; /* Vertically center items within the header */
+  position: relative; /* Ensure relative positioning for child absolute elements */
+}
+
+
+
+#hero {
+  position: relative; /* Ensure the hero section is positioned relative */
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  overflow: hidden; /* Ensure overflow content (blurred image) is hidden */
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure the overlay is above the background image */
+}
+#activehome{
+  background-color: #ff9b08;
+}
+
+#hero .container {
+  position: relative; /* Ensure the container is positioned relative */
+  z-index: 2; /* Ensure the text is above the overlay */
+  padding-top: 110px;
+}
+
+#activehome{
+  background-color: #ff9b08;
+}
+
+
+
+@media (max-width: 992px) {
+  #hero .container {
+    padding-top: 98px;
+  }
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero h1 span {
+  color: #ff9b08;
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 10px 0 0 0;
+  font-size: 22px;
+}
+
+#hero .btns {
+  margin-top: 30px;
+}
+
+#hero .btn-menu, #hero .btn-book {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: white;
+  border: 2px solid #ff9b08;
+}
+
+#hero .btn-menu:hover, #hero .btn-book:hover {
+  background: #ff9b08;
+  color: #fff;
+}
+
+#hero .btn-book {
+  margin-left: 15px;
+}
+
+#hero .play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(#cda45e 50%, rgba(205, 164, 94, 0.4) 52%);
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero .play-btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+#hero .play-btn::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate-btn 2s;
+  animation: pulsate-btn 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(205, 164, 94, 0.7);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+
+#hero .play-btn:hover::after {
+  border-left: 15px solid #cda45e;
+  transform: scale(20);
+}
+
+#hero .play-btn:hover::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  -webkit-animation: none;
+  animation: none;
+  border-radius: 0;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 992px) {
+  #hero .play-btn {
+    margin-top: 30px;
+  }
+}
+
+@media (max-height: 500px) {
+  #hero {
+    height: auto;
+  }
+  #hero .container {
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@-webkit-keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+.logo {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+}
+
+.logo img {
+  width: 80px; /* Adjust width of the logo as needed */
+  height: auto;
+  margin-right: 10px; /* Add space between the image and text */
+}
+
+.logo span {
+  font-size: 2.5em; /* Adjust font size as needed */
+  font-family: 'EFCO Brookshire', sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #AE8625;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+section {
+  padding: 20px;
+}
+
+footer {
+  background-color: #cba366;
+  color: #ff9b08;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  
+  
+}
+
+.contact {
+  flex: 1; /* Take up remaining space */
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: flex-end; /* Align items to the right */
+}
+
+.social-icon {
+  margin-top: 10px;
+  margin-bottom: 5px; /* Add spacing between icons */
+}
+
+.social-icon img {
+  width: 30px; 
+  height: 30px;
+  border-radius: 50%; 
+  transition: transform 0.3s ease;
+}
+
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.contact p {
+  margin: 15px 0;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+
+
+.social-icon:hover img {
+  transform: scaleX(-1); /* Invert horizontally on hover */
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-us {
+  background-color: #e4be84;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.about-us h1 {
+
+text-align: center;
+font-family: 'Sofia', sans-serif;
+font-size: 45px;
+margin-top: 20px;
+margin-bottom: 20px;
+color: #fff;
+
+}
+.slider {
+  position: relative;
+  width: 1000px; /* Set slider width to 350px */
+  height: 550px; /* Set slider height to 250px */
+  margin: 40px auto;
+  overflow: hidden;
+  border: 2px solid #ff9b08;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-us .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.about-us .content.reverse {
+  flex-direction: column-reverse;
+}
+
+.about-us .content .image {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-us .content.reverse .image {
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+
+.about-us .content .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ff9b08;
+}
+
+.about-us .content .text {
+  max-width: 600px;
+}
+
+.about-us .content .text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .about-us .content {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+  }
+  .about-us .content.reverse {
+      flex-direction: row-reverse;
+  }
+  .about-us .content .image, .about-us .content .text {
+      flex: 1;
+  }
+  .about-us .content .image {
+      margin-right: 20px;
+      margin-bottom: 0;
+  }
+  .about-us .content.reverse .image {
+      margin-left: 20px;
+      margin-right: 0;
+  }
+}
+
+
+#titulli {
+  text-align: center;
+  font-family: 'Sofia', sans-serif;
+  font-size: 45px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.teamchefs{
+  background-color: #e4be84;
+}
+.teamtitle {
+  background-color: #e0c398; /* Change the color code to the desired background color */
+}
+
+
+#ourteam {
+  text-align: center;
+  
+font-family: 'Sofia', sans-serif;
+font-size: 45px;
+margin-top: 20px;
+margin-bottom: 20px;
+color: #fff;
+}
+.boxchefs {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxchefs .card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #e4be84;
+  /*border: 2px solid #ff9b08; /* Add initial border with specified color */
+  transition: border-color 0.3s; /* Add transition for smooth color change */
+}
+
+.boxchefs .card .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  transition: 0.7s;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxchefs .card .icon img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+.boxchefs .card:nth-child(1) .icon {
+  background: #e07768;
+}
+
+.boxchefs .card:nth-child(2) .icon {
+  background: #6eadd4;
+}
+
+.boxchefs .card:nth-child(3) .icon {
+  background: #4aada9;
+}
+
+.boxchefs .card .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.boxchefs .card .face.face1 {
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.boxchefs .card:hover .face.face1 {
+  background: #ff0057;
+  transform: translateY(0px);
+}
+
+.boxchefs .card .face.face1 .content {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.boxchefs .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.boxchefs .card .face.face2 {
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+}
+
+.boxchefs .card:hover .face.face2 {
+  transform: translateY(0);
+  background-color: #ff9b08;
+}
+
+.boxchefs .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size: 25px;
+}
+
+.boxchefs .card .face.face2 .content h3 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 24px;
+  text-align: center;
+  color: #414141;
+  
+}
+
+.boxchefs a {
+  text-decoration: none;
+  color: #414141;
+}
+
